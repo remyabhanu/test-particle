@@ -1,7 +1,7 @@
 ##(This repository and the documentation are under construction)
 
 # Test-particle  
-Trace energetic particles in the Radiation belts
+This code trace the trayectory of energetic particles in the Radiation belts
 
 ## Dependencies
 
