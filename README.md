@@ -1,4 +1,4 @@
-## !!This repository and the documentation are under construction)!!
+## !!This repository and the documentation are under development)!!
 
 # Test-particle  
 This code trace the trayectory of energetic particles in the Radiation belts. The method used is described in 
