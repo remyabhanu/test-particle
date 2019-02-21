@@ -1,0 +1,72 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module weimFort ! in 
+    interface  ! in :weimFort
+        subroutine dlegendre(x,lmax,mmax,plm,dplm) ! in :weimFort:w2k.f
+            double precision :: x
+            integer :: lmax
+            integer :: mmax
+            double precision dimension(11,11) :: plm
+            double precision dimension(11,11) :: dplm
+        end subroutine dlegendre
+        function fsval(omega,maxn,fsc) ! in :weimFort:w2k.f
+            real :: omega
+            integer :: maxn
+            real dimension(2,*) :: fsc
+            real :: fsval
+        end function fsval
+        subroutine setmodel(angle,bt,tilt,swvel,swden,alindex,useal) ! in :weimFort:w2k.f
+            real :: angle
+            real :: bt
+            real :: tilt
+            real :: swvel
+            real :: swden
+            real :: alindex
+            logical :: useal
+            integer*4 :: maxj
+            integer*4 :: maxo
+            real dimension(4,2,3,2,5,4) :: cs
+            real dimension(4,2,3,2,3) :: bcs
+            real dimension(2,2,3,2,5,4) :: ss
+            real dimension(2,2,3,2,3) :: bss
+            double precision :: dpi
+            real dimension(2,6,6) :: coef
+            real dimension(2,6) :: boundfit
+            real :: pi
+            integer*4 :: maxl
+            integer*4 :: maxm
+            integer*4 :: maxn
+            common /allw2kcoefs/ maxj,maxo,cs,bcs,ss,bss
+            common /setw2kcoef/ dpi,coef,boundfit,pi,maxl,maxm,maxn
+        end subroutine setmodel
+        function boundarylat(gmlt) ! in :weimFort:w2k.f
+            real :: gmlt
+            double precision :: dpi
+            real dimension(2,6,6) :: coef
+            real dimension(2,6) :: boundfit
+            real :: pi
+            integer :: maxl
+            integer :: maxm
+            integer :: maxn
+            real :: boundarylat
+            common /setw2kcoef/ dpi,coef,boundfit,pi,maxl,maxm,maxn
+        end function boundarylat
+        function epotval(glat,gmlt) ! in :weimFort:w2k.f
+            real :: glat
+            real :: gmlt
+            double precision :: dpi
+            real dimension(2,6,6) :: coef
+            real dimension(2,6) :: boundfit
+            real :: pi
+            integer :: maxl
+            integer :: maxm
+            integer :: maxn
+            real :: epotval
+            common /setw2kcoef/ dpi,coef,boundfit,pi,maxl,maxm,maxn
+        end function epotval
+    end interface 
+end python module weimFort
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
