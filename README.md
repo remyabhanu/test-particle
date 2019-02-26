@@ -15,4 +15,16 @@ spacepy https://pythonhosted.org/SpacePy/install.html
 
 ## Install
 
+1- Clone and intall
+
+git clone https://github.com/germanfarinas/test-particle.git
+cd test-particle
 python setup.py install
+
+
+2- Dowload the the Qin-Denton database
+
+The Tsyganenko routines use the W parameters. These parameters are already pre-calculated in the Qin-Denton database. To download the data execute the following command
+
+
+3- 
