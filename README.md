@@ -6,7 +6,7 @@ This code trace the trayectory of energetic particles in the Radiation belts. Th
 
 The original test-particle code was written in fortran by Fok, M.-C. and colaborators. This project convert the original code to python and improve the visualitation and analysis of the data. 
 
-Also it is possible to trce the trayectory of particle with non $90^o$ pitch angles
+Also it is possible to trce the trayectory of particle with non 90 degrees pitch angles
 ## Dependencies
 
 AE index plot (https://github.com/scivision/AEindex#ae-index-plot)
