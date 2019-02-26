@@ -49,9 +49,9 @@ weim = Extension('weimFort',
 # Now execute the setup
 #############################################################################
 setup(name='testpartpy',
-      version="0.8",
-      description="Space Science Toolkit",
-      author="VT SuperDARN Lab and friends",
+      version="0.1",
+      description="Space Science and Radiation Belts",
+      author="Work done at NASA by German",
       author_email="german.farinas@gmail.com",
       url="",
       download_url="",
